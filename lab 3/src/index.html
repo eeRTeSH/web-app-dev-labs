@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- фавикон -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- стили -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>КотоМир | ЛР 3</title>
+</head>
+<body data-spy="scroll" data-target="#catNav" data-offset="100">
+
+    <header class="shadow sticky-top bg-white">
+        <div class="header-top py-2" style="background: linear-gradient(135deg, #fff0f5, #ea1038);">
+            <div class="container-fluid d-flex align-items-center justify-content-center text-white">
+                <img src="Logo.png" alt="Лого" width="45" class="mr-3 rounded shadow-sm">
+                <h1 class="h5 mb-0 font-weight-bold">Лабораторная работа 3: DOM</h1>
+            </div>
+        </div>
+        
+        <!-- меню: при выборе пункта подсвечивается соответствующий раздел -->
+        <nav id="catNav" class="navbar navbar-expand navbar-light bg-white border-bottom justify-content-center">
+            <ul class="navbar-nav w-100 justify-content-center">
+                <li class="nav-item"><a class="nav-link px-4 font-weight-bold" href="#history">История</a></li>
+                <li class="nav-item"><a class="nav-link px-4 font-weight-bold" href="#media">Медиа</a></li>
+                <li class="nav-item"><a class="nav-link px-4 font-weight-bold" href="#gallery">Галерея</a></li>
+                <li class="nav-item"><a class="nav-link px-4 font-weight-bold" href="#table">Породы</a></li>
+                <li class="nav-item"><a class="nav-link px-4 font-weight-bold" href="#feedback">Опрос</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-bg text-white text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('closeup-shot-lying-cat.jpg'); background-size: cover; background-position: center; min-height: 50vh; display: flex; align-items: center;">
+        <div class="container-fluid py-5">
+            <h2 class="display-2 font-weight-bold text-uppercase">Мир Кошек</h2>
+            <p class="lead px-3">О глобальной пушности:)</p>
+        </div>
+    </section>
+
+    <main class="container-fluid px-0">
+        
+        <!-- история -->
+        <section id="history" class="page-section py-5 px-4 bg-white">
+            <h2 class="text-pink mb-4 text-center"><i class="bi bi-clock-history"></i> Полная летопись</h2>
+            <div class="card border-0 shadow-sm p-4 mx-auto">
+                <p class="lead text-pink font-weight-bold text-center mb-5">От дикого ливийского кота до полноправного члена семьи.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-xl-6 mb-4">
+                        <h5 class="font-weight-bold"><i class="bi bi-sun text-warning"></i> Культ Бастет</h5>
+                        <p>История одомашнивания началась около 9 500 лет назад на Ближнем Востоке. Однако именно в Египте кошки обрели божественный статус. За убийство кошки (даже случайное) полагалась смертная казнь. Египтяне ценили их за защиту зернохранилищ от грызунов и змей. Археологи находили целые кладбища мумифицированных кошек, похороненных с личными вещами и запасом молока на «тот свет».</p>
+                    </div>
+
+                    <div class="col-xl-6 mb-4">
+                        <h5 class="font-weight-bold"><i class="bi bi-moon-stars text-primary"></i> Стражи свитков</h5>
+                        <p>В Японии кошки появились в VI веке как драгоценный дар императору. Они считались настолько ценными, что их держали на золотых поводках во дворцах. Главной задачей кошек в буддийских храмах была охрана священных рукописей от мышей. Именно здесь зародилась легенда о <b>Манэки-нэко</b> – «манящем коте», который приносит удачу и процветание своему владельцу.</p>
+                    </div>
+
+                    <div class="col-xl-6 mb-4">
+                        <h5 class="font-weight-bold"><i class="bi bi-shield-exclamation text-danger"></i> Инквизиция</h5>
+                        <p>В XII–XV веках в Европе начались гонения. Папа Григорий IX объявил кошек (особенно черных) пособниками дьявола. Это суеверие привело к катастрофическому сокращению популяции животных. Последствия были ужасающими: расплодившиеся крысы принесли в города бубонную чуму («Чёрную смерть»), унесшую жизни 25 миллионов человек. Только после этого люди осознали кошачью ценность.</p>
+                    </div>
+
+                    <div class="col-xl-6 mb-4">
+                        <h5 class="font-weight-bold"><i class="bi bi-house-heart text-success"></i> От Просвещения до Интернета</h5>
+                        <p>В XVIII веке кошки окончательно вернули себе статус любимцев. Великие мыслители, такие как Исаак Ньютон (легенда приписывает ему изобретение кошачьей дверцы) и Эрнест Хемингуэй, превратили их в символ мудрости и уединения. Сегодня в мире насчитывается более 600 миллионов домашних кошек. Они стали главными героями массовой культуры, захватив не только наши дома, но и всё пространство интернета.</p>
+                    </div>
+                </div>
+
+                <!-- aside: по нажатию содержимое показывается во всплывающем окне -->
+                <aside class="aside-popup p-4 bg-pink-light rounded border-left-pink mt-4 shadow-sm" title="Нажмите, чтобы открыть во всплывающем окне">
+                    <h6 class="aside-title font-weight-bold text-pink"><i class="bi bi-info-circle"></i> Научная справка:</h6>
+                    <p class="aside-text mb-0 small font-italic">
+                        Исследования ДНК, проведенные в 2017 году, доказали, что все домашние кошки мира происходят от <b>Felis lybica lybica</b> (степной кот). Процесс одомашнивания происходил в два этапа: первый – в Плодородном полумесяце с приходом земледелия, второй – в Египте, откуда кошки распространились по всему миру на торговых судах.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- медиа -->
+        <section id="media" class="page-section py-5 px-4 bg-light text-center">
+            <h2 class="text-pink mb-5 text-center"><i class="bi bi-play-circle"></i> Голоса и повадки</h2>
+            
+            <div class="row no-gutters justify-content-center">
+                
+                <div class="col-lg-4 px-3 mb-4 mb-lg-0">
+                    <div class="card border-0 shadow-sm p-4 h-100 text-center">
+                        <label class="font-weight-bold d-block mb-3">Кошачьи игры и охота</label>
+                        <div class="embed-responsive embed-responsive-16by9 rounded shadow-sm border">
+                            <video controls class="embed-responsive-item">
+                                <source src="виля.mp4" type="video/mp4">
+                                </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 px-3 mb-4 mb-lg-0">
+                    <div class="card border-0 shadow-sm p-4 h-100 text-center d-flex flex-column justify-content-center align-items-center">
+                        <label class="font-weight-bold d-block mb-3">Послушайте, как мурчит котик</label>
+                        <audio controls class="w-100 shadow-sm rounded-pill mt-auto mb-auto">
+                            <source src="meowing.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 px-3 mb-4 mb-lg-0">
+                    <div class="card border-0 shadow-sm p-4 h-100 text-center">
+                        <label class="font-weight-bold d-block mb-3">Неравная борьба с палкой</label>
+                        <div class="embed-responsive embed-responsive-16by9 rounded shadow-sm border">
+                            <video controls class="embed-responsive-item">
+                                <source src="виля2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="aside-popup p-4 bg-white rounded border-left-pink mt-5 shadow-sm text-left" title="Нажмите, чтобы открыть во всплывающем окне">
+                <h6 class="aside-title font-weight-bold text-pink"><i class="bi bi-soundwave"></i> Почему кошки мурчат?</h6>
+                <p class="aside-text mb-0 small">
+                    Мурчание возникает при быстром сокращении мышц гортани с частотой около 25-150 Гц. Кошки мурчат не только от удовольствия, но и чтобы успокоиться при стрессе или боли. Считается, что такие вибрации могут способствовать заживлению тканей.
+                </p>
+            </aside>
+        </section>
+
+        <!-- галерея -->
+        <section id="gallery" class="page-section py-5 bg-white">
+            <h2 class="text-pink mb-4 text-center"><i class="bi bi-images"></i> Фото-галерея</h2>
+            <div class="row no-gutters">
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/4.jpg" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/2.jpg" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/виля9.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/6.jpg" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/1.jpg" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/5.jpg" class="img-fluid hover-zoom" alt="Кот"></div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/виля1.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/виля2.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/виля3.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/виля6.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/ева2.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/ева3.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/ева4.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/виля4.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/виля5.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/ева1.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/виля7.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+                <div class="col-6 col-md-4 col-lg-2"><img src="images/виля8.JPEG" class="img-fluid hover-zoom" alt="Кот"></div>
+            </div>
+
+            <div class="px-4">
+                <aside class="aside-popup p-4 bg-pink-light rounded border-left-pink mt-4 shadow-sm" title="Нажмите, чтобы открыть во всплывающем окне">
+                    <h6 class="aside-title font-weight-bold text-pink"><i class="bi bi-camera"></i> О фотографиях</h6>
+                    <p class="aside-text mb-0 small">
+                        В галерее собраны фотографии самых разных кошек, в том числе домашних любимцев Вили и Евы. Наведите курсор на снимок, чтобы увеличить его.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- таблица пород -->
+        <section id="table" class="page-section py-5 px-0 bg-light text-center">
+            <div class="table-responsive px-4">
+                <table id="breedTable" class="table table-hover bg-white shadow-sm rounded overflow-hidden">
+                    <thead>
+                        <tr class="bg-pink-light">
+                            <th colspan="6" class="text-pink text-center font-weight-bold h3 py-3">
+                                <i class="bi bi-table"></i> Сравнение пород кошек
+                            </th>
+                        </tr>
+                        <!-- строка с названиями столбцов: нажатие выделяет столбец тенью -->
+                        <tr id="breedHead" class="bg-pink text-white">
+                            <th>Порода</th>
+                            <th>Происхождение</th>
+                            <th>Активность</th>
+                            <th>Размер</th>
+                            <th>Дружелюбие</th>
+                            <th>Линька</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Мейн-кун</b></td>
+                            <td>США</td>
+                            <td>Высокая</td>
+                            <td>6-11 кг</td>
+                            <td>100%</td>
+                            <td>Средняя</td>
+                        </tr>
+                        <tr>
+                            <td><b>Сфинкс</b></td>
+                            <td>Канада</td>
+                            <td>Очень высокая</td>
+                            <td>3-5 кг</td>
+                            <td>98%</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td><b>Британская короткошёрстная</b></td>
+                            <td>Великобритания</td>
+                            <td>Средняя</td>
+                            <td>4-8 кг</td>
+                            <td>95%</td>
+                            <td>Высокая</td>
+                        </tr>
+                        <tr>
+                            <td><b>Сиамская</b></td>
+                            <td>Таиланд</td>
+                            <td>Высокая</td>
+                            <td>3-6 кг</td>
+                            <td>85%</td>
+                            <td>Средняя</td>
+                        </tr>
+                        <tr>
+                            <td><b>Шотландская вислоухая</b></td>
+                            <td>Шотландия</td>
+                            <td>Средняя</td>
+                            <td>4-6 кг</td>
+                            <td>80%</td>
+                            <td>Средняя</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="px-4">
+                <aside class="aside-popup p-4 bg-white rounded border-left-pink mt-4 shadow-sm text-left" title="Нажмите, чтобы открыть во всплывающем окне">
+                    <h6 class="aside-title font-weight-bold text-pink"><i class="bi bi-lightbulb"></i> Как читать таблицу</h6>
+                    <p class="aside-text mb-0 small">
+                        Показатель дружелюбия условный и отражает средние отзывы владельцев. Нажмите на название столбца, чтобы выделить его значения; повторное нажатие снимает выделение.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- анкета кошатника -->
+        <section id="feedback" class="page-section py-5 px-4 bg-white">
+            <div class="container-fluid px-0">
+                <div class="card border-0 shadow-lg overflow-hidden">
+                    <div class="card-header bg-pink text-white text-center font-weight-bold py-3">
+                        <i class="bi bi-clipboard-heart"></i> АНКЕТА КОШАТНИКА
+                    </div>
+                    <div class="card-body bg-pink-light p-4">
+                        <form id="catForm" name="catForm" action="#" method="post">
+                            <!-- имя и кличка кота -->
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="ownerName"><i class="bi bi-person-raised-hand"></i> Ваше имя:</label>
+                                    <input type="text" class="form-control" id="ownerName" name="ownerName" placeholder="Например, Анна" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="catName"><i class="bi bi-github"></i> Кличка кота:</label>
+                                    <input type="text" class="form-control" id="catName" name="catName" placeholder="Например, Барсик" required>
+                                </div>
+                            </div>
+
+                            <!-- возраст кота и пол -->
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="catAge"><i class="bi bi-calendar"></i> Возраст кота:</label>
+                                    <input type="number" class="form-control" id="catAge" name="catAge" min="0" max="30" placeholder="3">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="catSex"><i class="bi bi-gender-ambiguous"></i> Пол кота:</label>
+                                    <select class="form-control" id="catSex" name="catSex">
+                                        <option>Мальчик</option>
+                                        <option>Девочка</option>
+                                        <option>Не знаю</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="catColor"><i class="bi bi-palette"></i> Окрас кота:</label>
+                                    <input type="text" class="form-control" id="catColor" name="catColor" placeholder="Рыжий, чёрный, белый...">
+                                </div>
+                            </div>
+
+                            <!-- особенность, характер -->
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="catMarks"><i class="bi bi-heart"></i> Особые приметы:</label>
+                                    <input type="text" class="form-control" id="catMarks" name="catMarks" placeholder="Белые лапки, пятнышко на носу...">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="catTemper"><i class="bi bi-chat-left-dots"></i> Характер кота:</label>
+                                    <select class="form-control" id="catTemper" name="catTemper">
+                                        <option>Ласковый и нежный</option>
+                                        <option>Спокойный и флегматичный</option>
+                                        <option>Активный и игривый</option>
+                                        <option>Независимый и гордый</option>
+                                        <option>Очень голодный всегда</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- комментарий -->
+                            <div class="form-group">
+                                <label for="catStory"><i class="bi bi-pencil-square"></i> Расскажите о своём коте подробнее:</label>
+                                <textarea class="form-control" id="catStory" name="catStory" rows="4" placeholder="Мой кот любит спать на коленях, обожает играть с фантиками и очень громко мяукает по утрам..."></textarea>
+                            </div>
+
+                            <!-- оценка любви к коту -->
+                            <div class="form-group">
+                                <label for="catLove"><i class="bi bi-star"></i> Насколько сильно вы любите своего кота?</label>
+                                <input type="range" class="form-control-range" id="catLove" name="catLove" min="0" max="10" value="10">
+                                <div class="d-flex justify-content-between px-2 mt-1">
+                                    <span>Не люблю</span>
+                                    <span>Нормально</span>
+                                    <span>Обожаю!</span>
+                                </div>
+                            </div>
+
+                            <!-- согласие на обработку данных -->
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="agreeCheck" name="agreeCheck">
+                                <label class="form-check-label" for="agreeCheck">
+                                    Согласен на обработку персональных данных и получение писем с котиками
+                                </label>
+                            </div>
+
+                            <!-- кнопки сброса и отправки -->
+                            <div class="form-row mt-3">
+                                <div class="col-md-6 mb-2">
+                                    <input type="reset" class="btn btn-outline-pink btn-block shadow-sm" value="ОЧИСТИТЬ АНКЕТУ">
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <input type="submit" class="btn btn-pink btn-block shadow" value="ОТПРАВИТЬ АНКЕТУ">
+                                </div>
+                            </div>
+                        </form>
+
+                        <aside class="aside-popup p-4 bg-white rounded border-left-pink mt-4 shadow-sm" title="Нажмите, чтобы открыть во всплывающем окне">
+                            <h6 class="aside-title font-weight-bold text-pink"><i class="bi bi-question-circle"></i> Зачем эта анкета?</h6>
+                            <p class="aside-text mb-0 small">
+                                Ответы помогут подобрать для вашего кота интересные статьи, советы по уходу и подборку игрушек. Обязательны только имя владельца и кличка кота.
+                            </p>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-3 px-4 text-center">
+        <p><i class="bi bi-c-circle"></i> 2026 Лабораторная работа №3 | Володина С.Д. </p>
+        <p>Все права защищены.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- собственный сценарий работы с DOM -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* настройки цветовой палитры */
+:root {
+    --pink-main: #ffb6c1;
+    --pink-dark: #b84a6a;
+    --pink-light: #fff5f7;
+    --pink-selected: #ffdbe4;  /* фон раздела, выбранного в меню */
+}
+
+/* вспомогательные классы для текстов и фонов */
+.text-pink { color: var(--pink-dark) !important; }
+.bg-pink { background-color: var(--pink-main) !important; }
+.bg-pink-light { background-color: var(--pink-light) !important; }
+
+/* розовая полоса слева у информационных блоков */
+.border-left-pink { border-left: 5px solid var(--pink-dark) !important; }
+
+/* стилизация карточек Bootstrap */
+.card {
+    border-radius: 15px !important;
+    transition: 0.3s ease-in-out;
+}
+
+/* эффекты для галереи */
+.hover-zoom {
+    transition: transform 0.5s ease;
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    cursor: pointer;
+    position: relative; 
+    z-index: 1;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1);
+    z-index: 10; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* стилизация кнопок */
+.btn-pink {
+    background-color: var(--pink-main);
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-pink:hover {
+    background-color: var(--pink-dark);
+    box-shadow: 0 5px 15px rgba(184, 74, 106, 0.4);
+}
+
+/* кнопка сброса формы - контурный вариант */
+.btn-outline-pink {
+    background-color: white;
+    color: var(--pink-dark);
+    font-weight: bold;
+    border-radius: 50px;
+    border: 2px solid var(--pink-main);
+    transition: 0.3s;
+}
+
+.btn-outline-pink:hover {
+    background-color: var(--pink-light);
+    color: var(--pink-dark);
+    border-color: var(--pink-dark);
+}
+
+/* ===== стили для работы сценария script.js ===== */
+
+/* разделы, на которые ссылается меню: плавная смена фона */
+.page-section {
+    transition: background-color 0.4s ease;
+}
+
+/* раздел, выбранный в меню (класс добавляется из JS);
+   !important нужен, чтобы перекрыть классы Bootstrap bg-white и bg-light */
+.page-section.section-selected {
+    background-color: var(--pink-selected) !important;
+}
+
+/* названия столбцов таблицы кликабельны */
+#breedHead th {
+    cursor: pointer;
+    user-select: none;
+    /* явный фон: без него Chrome после снятия выделения может закрасить ячейку белым */
+    background-color: var(--pink-main);
+    transition: background-color 0.3s;
+}
+
+#breedHead th:hover {
+    background-color: var(--pink-dark);
+}
+
+/* название выделенного столбца */
+#breedHead th.column-head-active {
+    background-color: var(--pink-dark);
+    text-decoration: underline;
+}
+
+/* выделение тенью содержимого ячеек столбца (класс добавляется из JS) */
+.column-shadow {
+    text-shadow: 2px 2px 4px rgba(184, 74, 106, 0.85);
+    font-weight: bold;
+}
+
+/* элементы aside: по нажатию открывается всплывающее окно */
+.aside-popup {
+    display: block;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.aside-popup:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(184, 74, 106, 0.25) !important;
+}
+
+/* подсказка о возможности нажатия */
+.aside-popup .aside-title::after {
+    content: " (нажмите, чтобы открыть)";
+    font-weight: normal;
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* плавная смена цвета полей формы при подсветке из JS */
+#catForm .form-control,
+#catForm .form-control-range,
+#catForm .form-check-input {
+    transition: background-color 0.2s;
+}
+
+/* мобила */
+@media (max-width: 768px) {
+    /* заголовок */
+    .display-2 {
+        font-size: 2.5rem !important;
+        letter-spacing: 1px;
+    }
+
+    /* галерея, 2 фото в ряд */
+    #gallery .col-6 {
+        padding: 2px !important;
+    }
+    
+    .hover-zoom {
+        height: 180px;
+    }
+
+    /* медиа, друг под другом */
+    #media .col-lg-4 {
+        margin-bottom: 20px;
+    }
+
+    /* таблица */
+    .table {
+        font-size: 0.85rem;
+    }
+    .table td, .table th {
+        padding: 0.5rem; /* Ужимаем ячейки */
+    }
+
+    /* навигация */
+    .nav-link {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        font-size: 0.9rem;
+    }
+
+    /* анкета */
+    .card-body {
+        padding: 1.5rem !important;
+    }
+}
