@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровая энциклопедия - Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo">🎮 GamePedia</div>
+
+        <nav class="main-nav">
+            <a href="#" onclick="showUnavailable('Каталог'); return false;">
+                Каталог
+            </a>
+            <a href="#" onclick="showUnavailable('Закладки'); return false;">
+                Закладки
+            </a>
+            <a href="#" onclick="showUnavailable('Профиль'); return false;">
+                Профиль
+            </a>
+            <a href="#" onclick="showUnavailable('Вход'); return false;">
+                Вход
+            </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Форма поиска -->
+        <section class="search-section">
+            <form id="searchForm" onsubmit="alert('Функция поиска на данный момент недоступна!'); return false;">
+
+                <input type="text" name="query" placeholder="Поиск игр, жанров или разработчиков...">
+
+                <button type="submit">Поиск</button>
+            </form>
+        </section>
+
+        <!-- Тренды недели -->
+        <section class="trends">
+            <h2>Тренды недели</h2>
+
+            <div class="game-grid">
+                <div class="game-card">
+                    <div class="cover-placeholder">Обложка</div>
+                    <h3>Cyberpunk 2077</h3>
+                </div>
+
+                <div class="game-card">
+                    <div class="cover-placeholder">Обложка</div>
+                    <h3>Elden Ring</h3>
+                </div>
+
+                <div class="game-card">
+                    <div class="cover-placeholder">Обложка</div>
+                    <h3>Baldur's Gate 3</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Быстрые теги и фильтры -->
+        <section class="tags-filters">
+
+            <div class="filter-bar">
+                <span>Быстрые теги:</span>
+                <button class="tag">RPG</button>
+                <button class="tag">Шутеры</button>
+                <button class="tag">Инди</button>
+            </div>
+
+            <div class="filter-bar">
+                <span>Фильтры:</span>
+
+                <select>
+                    <option>По жанру</option>
+                </select>
+
+                <select>
+                    <option>По году</option>
+                </select>
+
+                <select>
+                    <option>По платформе</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Каталог игр -->
+        <section class="catalog">
+            <h2>Каталог игр</h2>
+
+            <div class="game-grid">
+                <div class="game-card">
+                    <div class="cover-placeholder">Обложка</div>
+                </div>
+                <div class="game-card">
+                    <div class="cover-placeholder">Обложка</div>
+                </div>
+                <div class="game-card">
+                    <div class="cover-placeholder">Обложка</div>
+                </div>
+                <div class="game-card">
+                    <div class="cover-placeholder">Обложка</div>
+                </div>
+                <div class="game-card">
+                    <div class="cover-placeholder">Обложка</div>
+                </div>
+                <div class="game-card">
+                    <div class="cover-placeholder">Обложка</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="contacts">
+            <span>Связаться с нами:</span>
+            <a href="#">Telegram</a> |
+            <a href="#">VK</a> |
+            <a href="#">Email</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
